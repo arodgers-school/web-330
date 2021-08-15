@@ -1,0 +1,32 @@
+#container {
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#icon-mode:hover {
+  cursor: pointer;
+}
+
+#icon-text {
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.ul-border {
+  border-style: dotted;
+  border-width: 1px;
+  border-color: red;
+}
+
+i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 110px;
+  padding-top: 4px;
+}
