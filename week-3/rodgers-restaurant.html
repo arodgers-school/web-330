@@ -1,0 +1,155 @@
+<!--
+Title: Assignment 3.2
+Author: Adam Rodgers
+Date: 28 August 2021
+Modified By: Adam Rodgers
+Description: Restaurant App
+
+References:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WEB 330 – Enterprise JavaScript II</title>
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="rodgers-restaurant.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="app-header">Welcome to the Restaurant App!</h1>
+
+      <div class="card">
+        <div class="card-title">Restaurant Menu</div>
+        <br />
+        <div id="row">
+          <div class="card-content" id="beverages">
+            Beverages
+            <label for="soda">
+              <input type="checkbox" id="soda" name="Soda" value="$3.30" />
+              Soda
+            </label>
+            <label for="tea">
+              <input type="checkbox" id="tea" name="Sweet Tea" value="$3.30" />
+              Sweet Tea
+            </label>
+            <label for="coffee">
+              <input type="checkbox" id="coffee" name="Iced Coffee" value="$2.49" />
+              Iced Coffee
+            </label>
+            <label for="water">
+              <input type="checkbox" id="water" name="Bottled Water" value="$2.15" />
+              Bottled Water
+            </label>
+          </div>
+
+          <div class="card-content" id="appetizers">
+            Appetizers
+            <label for="nachos">
+              <input type="checkbox" id="nachos" name="Nachos" value="$6.60" />
+              Nachos
+            </label>
+            <label for="chips">
+              <input type="checkbox" id="chips" name="Chips and Salsa" value="$5.50" />
+              Chips and Salsa
+            </label>
+            <label for="pretzel">
+              <input type="checkbox" id="pretzel" name="Pretzel with Cheese" value="$8.80" />
+              Pretzel with Cheese
+            </label>
+            <label for="pickles">
+              <input type="checkbox" id="pickles" name="Fried Pickles" value="$8.25" />
+              Fried Pickles
+            </label>
+          </div>
+        </div>
+
+        <div id="row">
+          <div class="card-content" id="main-courses">
+            Main Courses
+            <label for="tacos">
+              <input type="checkbox" id="tacos" name="Street Tacos" value="$9.70" />
+              Street Tacos
+            </label>
+            <label for="wings">
+              <input type="checkbox" id="wings" name="Boneless Wings" value="$12.80" />
+              Boneless Wings
+            </label>
+            <label for="burger">
+              <input type="checkbox" id="burger" name="Cheeseburger with Fries" value="$12.65" />
+              Cheeseburger with Fries
+            </label>
+            <label for="wrap">
+              <input type="checkbox" id="wrap" name="Chicken Wrap with Salad" value="$9.65" />
+              Chicken Wrap with Salad
+            </label>
+          </div>
+          <div class="card-content" id="desserts">
+            Desserts
+            <label for="ice-cream">
+              <input type="checkbox" id="ice-cream" name="Ice Cream" value="$4.30" />
+              Ice Cream
+            </label>
+            <label for="cake">
+              <input type="checkbox" id="cake" name="Chocolate Cake" value="$5.40" />
+              Chocolate Cake
+            </label>
+            <label for="pie">
+              <input type="checkbox" id="pie" name="Apple Pie" value="$3.80" />
+              Apple Pie
+            </label>
+            <button type="button" id="btnOrder">Place Order</button>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="card">
+        <div class="card-title">Order Summary</div>
+        <div id="order-total" class="assign-results-text"></div>
+      </div>
+      <br />
+      <a href="../index.html" class="return-home">Return</a>
+    </div>
+    <script type="module">
+      import { Bill, Beverage, Appetizer, MainCourse, Dessert } from "./index.js";
+
+      document.getElementById("btnOrder").onclick = () => {
+        const beverages = document.getElementById("beverages").getElementsByTagName("input");
+        const appetizers = document.getElementById("appetizers").getElementsByTagName("input");
+        const mainCourses = document.getElementById("main-courses").getElementsByTagName("input");
+        const desserts = document.getElementById("desserts").dessertsEl.getElementsByTagName("input");
+
+        let bill = new Bill();
+
+        for (let mainCourse of mainCourses) {
+          if (mainCourse.checked) {
+            bill.addMainCourse(new MainCourse(mainCourse.name, mainCourse.value));
+          }
+        }
+
+        for (let appetizer of appetizers) {
+          if (appetizer.checked) {
+            bill.addAppetizer(new Appetizer(appetizer.name, appetizer.value));
+          }
+        }
+        for (let beverage of beverages) {
+          if (beverage.checked) {
+            bill.addBeverage(new Beverage(beverage.name, beverage.value));
+          }
+        }
+        for (let dessert of desserts) {
+          if (dessert.checked) {
+            bill.addDessert(new Dessert(dessert.name, dessert.value));
+          }
+        }
+
+        let total = bill.getTotal();
+        document.getElementById("order-total").innerHTML = `Your order total is ${total}`;
+      };
+    </script>
+  </body>
+</html>
