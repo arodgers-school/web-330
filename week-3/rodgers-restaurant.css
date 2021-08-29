@@ -31,6 +31,12 @@ body {
   color: #4f3674;
 }
 
+#order-total {
+  text-align: center;
+  font-size: 2em;
+  color: #000000;
+}
+
 label {
   color: #000000;
   font-size: 18px;
