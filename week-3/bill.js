@@ -41,7 +41,6 @@ export class Bill {
       total += parseFloat(dessert.price);
     });
 
-    let orderTotal = beverageTotal + appetizerTotal + mainCourseTotal + dessertTotal;
-    return orderTotal;
+    return total;
   }
 }
