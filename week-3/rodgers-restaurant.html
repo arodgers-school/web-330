@@ -125,9 +125,9 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
         let bill = new Bill();
 
-        for (let mainCourse of mainCourses) {
-          if (mainCourse.checked) {
-            bill.addMainCourse(new MainCourse(mainCourse.name, mainCourse.value));
+        for (let beverage of beverages) {
+          if (beverage.checked) {
+            bill.addBeverage(new Beverage(beverage.name, beverage.value));
           }
         }
 
@@ -136,20 +136,22 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
             bill.addAppetizer(new Appetizer(appetizer.name, appetizer.value));
           }
         }
-        for (let beverage of beverages) {
-          if (beverage.checked) {
-            bill.addBeverage(new Beverage(beverage.name, beverage.value));
+
+        for (let mainCourse of mainCourses) {
+          if (mainCourse.checked) {
+            bill.addMainCourse(new MainCourse(mainCourse.name, mainCourse.value));
           }
         }
+
         for (let dessert of desserts) {
           if (dessert.checked) {
             bill.addDessert(new Dessert(dessert.name, dessert.value));
           }
         }
 
-        let total = bill.getTotal();
-        console.log(total);
-        document.getElementById("order-total").innerHTML = `Your order total is ${total}`;
+        let orderTotal = bill.getTotal();
+        console.log(orderTotal);
+        document.getElementById("order-total").innerHTML = `Your order total is ${orderTotal}`;
       };
     </script>
   </body>
