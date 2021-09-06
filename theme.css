@@ -42,6 +42,11 @@ body.dark-theme {
   --btn-hover-background-color: #7d4787;
   --btn-hover-color: #fff;
   --input-border-color: #303030;
+  --table-header-background-color: #d176e1;
+  --table-header-color: #fff;
+  --table-border-color: #303030;
+  --table-hover-background-color: #7d4787;
+  --table-hover-color: #fff;
 }
 
 body {
