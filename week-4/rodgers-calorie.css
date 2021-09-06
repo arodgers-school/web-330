@@ -25,7 +25,7 @@ body {
   color: #4f3674;
 }
 
-#card-title {
+.card-title {
   text-align: center;
   font-size: 2em;
   color: #4f3674;
