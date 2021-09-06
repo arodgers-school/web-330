@@ -27,7 +27,7 @@ References:
       <div id="card">
         <div id="card-title">Calorie Search Form</div>
         <form>
-          <label for="txtFoodItem"> Enter a food item: </label>
+          <label for="txtFoodItem" id="txtPhraseLabel"> Enter a food item: </label>
           <input type="text" name="txtFoodItem" id="txtFoodItem" />
           <br />
           <span id="foodList"></span>
@@ -54,7 +54,7 @@ References:
       import { CalorieConverter } from "./calorie-converter.js";
 
       document.getElementById("btnSearch").onclick = () => {
-        let txtFoodItem = document.getElementById("txtFoodItem");
+        let txtFoodItem = document.getElementById("txtFoodItem").value;
         let foods = CalorieConverter.find(txtFoodItem);
         let tableData = "";
 
