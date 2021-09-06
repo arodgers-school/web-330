@@ -56,14 +56,14 @@ References:
       document.getElementById("btnSearch").onclick = () => {
         let txtFoodItem = document.getElementById("txtFoodItem");
         let foods = CalorieConverter.find(txtFoodItem);
-        let tableData = ``;
+        let tableData = "";
 
         for (let food of foods) {
           tableData += `<tr><td>${food.name}</td><td>${food.calories}</td></tr>`;
         }
       };
       let foodList = CalorieConverter.data;
-      let foodListData = `<i>`;
+      let foodListData = "<i>";
 
       for (let food of foodList) {
         foodListData += `${food.name}, `;
