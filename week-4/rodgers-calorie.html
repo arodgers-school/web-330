@@ -66,9 +66,9 @@ References:
       let foodListData = "<i>";
 
       for (let food of foodList) {
-        foodListData += "${food.name},";
+        foodListData += "${food.name}, ";
       }
-      foodListData = "${foodListData})</i>";
+      foodListData += "${foodListData})</i>";
 
       document.getElementById("foodList").innerHTML = foodListData;
     </script>
