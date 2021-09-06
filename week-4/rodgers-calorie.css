@@ -86,3 +86,9 @@ a:visited {
   border-width: 1px;
   border-color: red;
 }
+
+#foodList {
+  color: #df546a;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
