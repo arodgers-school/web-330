@@ -61,6 +61,7 @@ References:
         for (let food of foods) {
           tableData += `<tr><td>${food.name}</td><td>${food.calories}</td></tr>`;
         }
+        document.getElementById("resultsTable").innerHTML = tableData;
       };
       let foodList = CalorieConverter.data;
       let foodListData = "<i>";
