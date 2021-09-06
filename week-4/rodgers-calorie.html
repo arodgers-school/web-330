@@ -59,16 +59,16 @@ References:
         let tableData = "";
 
         for (let food of foods) {
-          tableData += "<tr><td>${food.name}</td><td>${food.calories}</td></tr>";
+          tableData += `<tr><td>${food.name}</td><td>${food.calories}</td></tr>`;
         }
       };
       let foodList = CalorieConverter.data;
       let foodListData = "<i>";
 
       for (let food of foodList) {
-        foodListData += "${food.name}, ";
+        foodListData += `${food.name}, `;
       }
-      foodListData += "${foodListData})</i>";
+      foodListData += `${foodListData})</i>`;
 
       document.getElementById("foodList").innerHTML = foodListData;
     </script>
