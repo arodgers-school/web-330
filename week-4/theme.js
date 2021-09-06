@@ -1,7 +1,7 @@
 /**
  * Set the default theme to light if one has not been set in the browsers localStorage
  */
-setDefaultTheme();
+//setDefaultTheme();
 
 function setDefaultTheme() {
   const theme = localStorage.getItem("mode") || "light-theme";
@@ -13,10 +13,6 @@ function setDefaultTheme() {
   document.getElementById("icon-text").innerHTML = iconText;
 }
 
-/**
- * Function to switch the users selected website theme
- * @param x (this instance)
- */
 function toggleMode(x) {
   let colorTheme = document.body.classList; // get the body's CSS class
   let iconMode = x.classList; // get the current classes assigned to the triggered button
