@@ -26,26 +26,30 @@ References:
 
       <div id="card">
         <div id="card-title">Calorie Search Form</div>
-        <form>
-          <label for="txtFoodItem" id="txtPhraseLabel"> Enter a food item: </label>
-          <input type="text" name="txtFoodItem" id="txtFoodItem" />
-          <br />
-          <span id="foodList"></span>
-          <br />
-          <button type="button" id="btnSearch">Search</button>
-        </form>
+        <div id="card-content">
+          <form>
+            <label for="txtFoodItem" id="txtPhraseLabel"> Enter a food item: </label>
+            <input type="text" name="txtFoodItem" id="txtFoodItem" />
+            <br />
+            <span id="foodList"></span>
+            <br />
+            <button type="button" id="btnSearch">Search</button>
+          </form>
+        </div>
       </div>
       <a href="../index.html" class="return-home">Return</a>
       <br />
       <div id="card">
         <p id="card-title">Search Results</p>
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>Calories</th>
-          </tr>
-          <tbody id="resultsTable"></tbody>
-        </table>
+        <div id="card-content">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Calories</th>
+            </tr>
+            <tbody id="resultsTable"></tbody>
+          </table>
+        </div>
       </div>
       <br />
     </div>
