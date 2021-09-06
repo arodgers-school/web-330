@@ -25,16 +25,10 @@ body {
   color: #4f3674;
 }
 
-.card-title {
+#card-title {
   text-align: center;
   font-size: 2em;
   color: #4f3674;
-}
-
-#order-total {
-  text-align: center;
-  font-size: 1.5em;
-  color: #000000;
 }
 
 label {
