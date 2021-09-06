@@ -12,37 +12,16 @@ body {
   font-family: "Oswald", Verdana, Arial, sans-serif;
 }
 
-#card-content {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  font-size: 24px;
-  justify-content: space-around;
-  width: 45%;
-  margin-left: 10px;
-  padding: auto;
-  text-align: center;
-  color: #4f3674;
-}
-
 #card-title {
   text-align: center;
   font-size: 2em;
   color: #4f3674;
+  font-weight: 400;
 }
 
-label {
-  color: #000000;
-  font-size: 18px;
-  text-align: left;
-  margin-left: 15px;
-  margin-bottom: 0;
-}
-
-#row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+#card-content {
+  padding: 2px 16px;
+  text-align: center;
 }
 
 .container {
@@ -101,13 +80,6 @@ a:hover {
 
 a:visited {
   color: #3c275a;
-}
-
-.container {
-  margin-top: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
-  max-width: 50%;
 }
 
 .ul-border {
