@@ -68,6 +68,8 @@ References:
       for (let food of foodList) {
         foodListData += "${food.name},";
       }
+      foodListData = "${foodListData})</i>";
+
       document.getElementById("foodList").innerHTML = foodListData;
     </script>
   </body>
