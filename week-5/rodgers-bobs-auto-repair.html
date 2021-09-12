@@ -1,0 +1,93 @@
+<!--
+Title: Assignment 5.2
+Author: Adam Rodgers
+Date: 11 September 2021
+Modified By: Adam Rodgers
+Description: Bob's Auto Repair
+
+References:
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WEB 330 – Enterprise JavaScript II</title>
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="rodgers-bobs-auto-repair.css" />
+    <link rel="stylesheet" href="../theme.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <body class="light-theme">
+    <!--<i onclick="toggleMode(this)" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 28px"><span id="icon-text"></span></i>-->
+    <div class="container">
+      <h1 id="app-header">Welcome to the Bob's Automotive Repair Shop!</h1>
+
+      <div class="card">
+        <div class="card-title">Product Listing</div>
+        <div class="card-title">shoppingcarticon</div>
+        <div class="card-content">
+          <form>
+            <label for="txtProductList" id="txtProductList"> Choose a product: </label>
+            <select class="drop-down-menu" id="productList">
+              <option value="Select">--Select--</option>
+              <option value="19.99">Oil Change</option>
+              <option value="18.44">Filter Replacement</option>
+              <option value="9.99">Wiper Fluid Refill</option>
+            </select>
+            <br />
+            <i id="cart-message">To view your shopping cart click on the cart icon</i>
+            <br />
+            <button type="button" id="btnAddProduct">Search</button>
+          </form>
+        </div>
+      </div>
+      <a href="../index.html" class="return-home">Return</a>
+      <br />
+      <div class="card">
+        <p class="card-title">Shopping Cart</p>
+        <div class="card-content" id="shoppingCart"></div>
+      </div>
+    </div>
+    <!--<script src="theme.js"></script>-->
+    <script type="module">
+      import { CartComponent } from "./cart-component.js";
+      import { Product } from "./product.js";
+      import { ShoppingCart } from "./shopping-cart.js";
+
+      let shoppingCart = new ShoppingCart();
+
+      setCartCount();
+
+      document.getElementById("btnAddProduct").onclick = function () {
+        let productList = document.getElementById("productList");
+        let product = productList.options[productList.selectedIndex].text;
+        let productValue = productList.options[productList.selectedIndex].value;
+
+        if (product != "--Select--") {
+          shoppingCart.addProduct(new Product(product, productValue));
+          setCartCount();
+          alert(`${product} was added to your shopping cart!`);
+          productList.value = "Select";
+        }
+      };
+
+      document.getElementById("cartIcon").onclick = function () {
+        let cartDisplayTable = `<table class="table"><tr><th>ID</th><th>Name</th<th>Price</th>`;
+
+        for (let _products of shoppingCart) {
+          cartDisplayTable += `<tr><td>${_products.id}</td><td>${_products.name}</td><td>${_products.price}</td></tr>`;
+        }
+
+        cartDisplayTable += `</table>`;
+
+        document.getElementById("shoppingCart").innerHTML = cartDisplayTable;
+      };
+
+      function setCartCount() {
+        document.getElementById("cart-count").innerHTML = shoppingCart.count();
+      }
+    </script>
+  </body>
+</html>
