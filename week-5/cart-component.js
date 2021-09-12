@@ -8,4 +8,4 @@ export class CartComponent extends HTMLElement {
   }
 }
 
-customerElements.define("cart-component", CartComponent);
+customElements.define("cart-component", CartComponent);
