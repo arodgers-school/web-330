@@ -1,0 +1,22 @@
+.navbar-custom {
+  background-color: #0a213d;
+}
+
+.body-custom {
+  background-color: #f2f2f2;
+}
+
+.custom-text {
+  color: #0a213d;
+}
+
+.custom-header {
+  color: #0a213d;
+  text-align: center;
+  font-weight: bold;
+}
+
+#footer-positioning {
+  position: absolute;
+  bottom: 0;
+}
