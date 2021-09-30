@@ -21,22 +21,19 @@ class Nav extends HTMLElement {
           <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Resume</a>
+          <a class="nav-link" href="resume.html">Resume</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
+          <a class="nav-link" href="projects.html">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">DB Diagrams</a>
+          <a class="nav-link" href="dbdiagrams.html">DB Diagrams</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">API Unit Tests</a>
+          <a class="nav-link" href="apitests.html">API Unit Tests</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Bucket List</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Quick Links</a>
+          <a class="nav-link" href="bucketlist.html">Bucket List</a>
         </li>
       </ul>
     </div>
