@@ -5,10 +5,10 @@ class Footer extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <footer class="page-footer font-small navbar-custom pt-4">
+    <footer class="page-footer font-small navbar-custom-bottom pt-4">
   <div class="container-fluid text-center text-md-left">
     <div class="row">
-      <div class="col-md-6 mt-md-0 mt-3">
+    <div class="col-md-9 mt-md-0 mt-1">
         <h5 class="text-uppercase">Adam Rodgers</h5>
         <p>Check out these links for more about me and Bellevue University</p>
       </div>

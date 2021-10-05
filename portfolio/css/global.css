@@ -1,5 +1,11 @@
-.navbar-custom {
+.navbar-custom-top {
   background-color: #0a213d;
+  border-bottom: 4px solid #528fdb;
+}
+
+.navbar-custom-bottom {
+  background-color: #0a213d;
+  border-top: 4px solid #528fdb;
 }
 
 .body-custom {

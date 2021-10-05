@@ -5,7 +5,7 @@ class Nav extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <nav class="navbar navbar-custom navbar-expand-lg sticky-top navbar-dark fixed-top">
+    <nav class="navbar navbar-custom-top navbar-expand-lg sticky-top navbar-dark fixed-top">
     <a class="navbar-brand" href=""><i class="fas fa-hand-point-right"></i> Adam Rodgers</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
