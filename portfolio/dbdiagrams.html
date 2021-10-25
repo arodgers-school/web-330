@@ -41,11 +41,11 @@
         <div class="col-sm d-flex justify-content-center">
           <div class="bu-card">
             <div class="card" style="width: 18rem">
-              <img id="myImg" src="web-335/umlet-ord.png" alt="ORD Diagram" style="width: 100%; max-width: 250px" />
-              <div id="myModal" class="modal">
+              <img id="myImg1" src="web-335/umlet-ord.png" alt="An ORD diagram created in Umlet" style="width: 100%; max-width: 250px" />
+              <div id="myModal1" class="modal">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="img01" />
-                <div id="caption"></div>
+                <div id="caption1"></div>
               </div>
               <div class="card-body">
                 <h5 class="card-title">ORD Diagram</h5>
@@ -57,11 +57,11 @@
         <div class="col-sm d-flex justify-content-center">
           <div class="bu-card">
             <div class="card" style="width: 18rem">
-              <img id="myImg" src="web-335/umlet-nosql.png" alt="ORD Diagram" style="width: 100%; max-width: 250px" />
-              <div id="myModal" class="modal">
+              <img id="myImg2" src="web-335/umlet-nosql.png" alt="A NoSQL Diagram created in Umlet" style="width: 100%; max-width: 250px" />
+              <div id="myModal2" class="modal">
                 <span class="close">&times;</span>
-                <img class="modal-content" id="img01" />
-                <div id="caption"></div>
+                <img class="modal-content" id="img02" />
+                <div id="caption2"></div>
               </div>
               <div class="card-body">
                 <h5 class="card-title">NoSQL Diagram</h5>
@@ -159,16 +159,16 @@
     <br />
     <script>
       // Get the modal
-      var modal = document.getElementById("myModal");
+      var modal = document.getElementById("myModal1");
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById("myImg");
-      var modalImg = document.getElementById("img01");
-      var captionText = document.getElementById("caption");
-      img.onclick = function () {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
+      var img1 = document.getElementById("myImg1");
+      var modalImg1 = document.getElementById("img01");
+      var captionText1 = document.getElementById("caption1");
+      img1.onclick = function () {
+        modal1.style.display = "block";
+        modalImg1.src = this.src;
+        captionText1.innerHTML = this.alt;
       };
 
       // Get the <span> element that closes the modal
@@ -176,7 +176,7 @@
 
       // When the user clicks on <span> (x), close the modal
       span.onclick = function () {
-        modal.style.display = "none";
+        modal1.style.display = "none";
       };
     </script>
     <!--Footer-->
